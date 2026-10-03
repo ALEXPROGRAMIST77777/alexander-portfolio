@@ -547,12 +547,13 @@ button {
 }
 
 
-/* BROWSER */
+/* PROJECT PREVIEW */
 
 .project-preview {
     min-height: 420px;
     background: #0b0d11;
     border-left: 1px solid #242933;
+    overflow: hidden;
 }
 
 .project-second .project-preview {
@@ -560,23 +561,41 @@ button {
     border-right: 1px solid #242933;
 }
 
-.browser-bar {
+.concept {
+    padding: 0;
+}
+
+.concept-browser {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+}
+
+.concept-browser-top {
     height: 38px;
     display: flex;
     align-items: center;
     gap: 14px;
     padding: 0 14px;
-    border-bottom: 1px solid #252a33;
+    border-bottom: 1px solid rgba(255,255,255,.07);
     background: #101217;
 }
 
-.browser-dots {
+.concept-browser-top .browser-dots {
     display: flex;
     gap: 5px;
 }
 
-.browser-address {
+.concept-browser-top .browser-dots i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #343943;
+}
+
+.concept-url {
     flex: 1;
+    max-width: 260px;
     background: #080a0d;
     border: 1px solid #22262d;
     border-radius: 5px;
@@ -587,183 +606,865 @@ button {
 }
 
 
-/* SHAURMX */
+/* RESTAURANT */
 
-.restaurant-site {
+.restaurant-visual {
     min-height: 382px;
     background:
-        radial-gradient(circle at 85% 20%, rgba(255,130,40,.14), transparent 28%),
-        #11100f;
+        radial-gradient(circle at 75% 25%, rgba(255,111,43,.25), transparent 27%),
+        radial-gradient(circle at 20% 90%, rgba(255,166,75,.08), transparent 30%),
+        #15100d;
+    color: white;
 }
 
-.restaurant-header {
-    height: 58px;
-    display: flex;
-    align-items: center;
+.restaurant-nav-new {
+    height: 57px;
     padding: 0 25px;
-    border-bottom: 1px solid rgba(255,255,255,.07);
-}
-
-.restaurant-logo {
-    font-weight: 800;
-    font-size: 17px;
-}
-
-.restaurant-logo span {
-    color: #ff742b;
-}
-
-.restaurant-nav {
-    margin-left: auto;
-    margin-right: 20px;
     display: flex;
-    gap: 18px;
-    color: #777;
-    font-size: 9px;
-}
-
-.cart-mini {
-    width: 29px;
-    height: 29px;
-    display: grid;
-    place-items: center;
-    border: 1px solid #34302c;
-    border-radius: 7px;
-    font-size: 11px;
-}
-
-.restaurant-hero {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 45px 40px 35px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
-.restaurant-hero small {
-    color: #ff7b35;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 8px;
-}
-
-.restaurant-hero h4 {
-    font-size: 30px;
-    line-height: 1.05;
-    margin-top: 11px;
+.restaurant-nav-new strong {
+    font-size: 18px;
     letter-spacing: -1px;
 }
 
-.restaurant-hero button {
+.restaurant-nav-new div {
+    margin-left: auto;
+    margin-right: 25px;
+    color: #80766e;
+    font-size: 8px;
+    letter-spacing: .1em;
+}
+
+.restaurant-nav-new button {
+    background: #f16d2b;
     border: 0;
-    background: #ff7028;
     color: white;
-    padding: 9px 14px;
-    border-radius: 5px;
-    margin-top: 18px;
-    font-size: 9px;
+    padding: 8px 13px;
+    border-radius: 4px;
+    font-size: 8px;
 }
 
-.food-circle {
-    width: 145px;
-    height: 145px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    background:
-        radial-gradient(circle, #3a2215, #1d130d 60%, transparent 61%);
-}
-
-.food {
-    font-size: 74px;
-    transform: rotate(-8deg);
-    filter: drop-shadow(0 15px 15px rgba(0,0,0,.6));
-}
-
-.food-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 9px;
-    padding: 0 25px 20px;
-}
-
-.food-cards > div {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 10px;
+.restaurant-main {
+    min-height: 270px;
+    display: flex;
     align-items: center;
-    border: 1px solid #292522;
-    padding: 11px;
-    border-radius: 6px;
-    background: #171412;
-    font-size: 9px;
-}
-
-.food-cards span {
-    color: #666;
-}
-
-.food-cards strong {
-    font-weight: 500;
-}
-
-.food-cards b {
-    color: #ff7834;
-}
-
-
-/* PERSONAL */
-
-.personal-screen {
-    min-height: 382px;
-    padding: 22px 25px;
-    background:
-        radial-gradient(circle at 50% 50%, rgba(76,105,255,.13), transparent 35%),
-        #080b10;
-    display: flex;
-    flex-direction: column;
-}
-
-.personal-top,
-.personal-bottom {
-    display: flex;
     justify-content: space-between;
-    color: #555e6e;
+    padding: 30px 42px;
+}
+
+.restaurant-copy small {
+    color: #ef7337;
     font-family: "JetBrains Mono", monospace;
     font-size: 8px;
 }
 
-.personal-top span:first-child {
-    color: #6e8cff;
-}
-
-.personal-center {
-    margin: auto;
-}
-
-.mini-code {
-    font-family: "JetBrains Mono", monospace;
-    color: #55617b;
-    font-size: 9px;
-    margin-bottom: 15px;
-}
-
-.personal-center h4 {
-    font-size: 36px;
-    line-height: 1;
+.restaurant-copy h4 {
+    max-width: 290px;
+    margin-top: 12px;
+    font-size: 42px;
+    line-height: .92;
     letter-spacing: -2px;
 }
 
-.personal-center h4 span {
-    color: #6986ff;
+.restaurant-copy h4 span {
+    color: #ff7a34;
 }
 
-.personal-center .mini-code:last-child {
-    margin-top: 16px;
-    margin-bottom: 0;
+.restaurant-copy p {
+    margin-top: 13px;
+    color: #8c8179;
+    font-size: 10px;
 }
 
-.personal-bottom {
-    border-top: 1px solid #171c26;
-    padding-top: 12px;
+.visual-button {
+    margin-top: 20px;
+    border: 1px solid #774027;
+    background: rgba(255,111,43,.1);
+    color: #ff9b69;
+    padding: 9px 12px;
+    border-radius: 4px;
+    font-size: 8px;
+}
+
+.restaurant-food-visual {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.plate-shadow {
+    position: absolute;
+    width: 170px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.5);
+    filter: blur(15px);
+    bottom: 25px;
+}
+
+.burger-visual {
+    position: relative;
+    width: 130px;
+    height: 105px;
+    transform: rotate(-4deg);
+    filter: drop-shadow(0 25px 25px rgba(0,0,0,.6));
+}
+
+.burger-visual span {
+    position: absolute;
+    left: 0;
+    width: 130px;
+    border-radius: 50%;
+}
+
+.burger-visual span:nth-child(1) {
+    top: 0;
+    height: 42px;
+    background: linear-gradient(#e99b52,#a84e20);
+}
+
+.burger-visual span:nth-child(2) {
+    top: 38px;
+    height: 13px;
+    background: #6cae38;
+}
+
+.burger-visual span:nth-child(3) {
+    top: 48px;
+    height: 23px;
+    background: #5c2c18;
+}
+
+.burger-visual span:nth-child(4) {
+    top: 68px;
+    height: 37px;
+    background: linear-gradient(#d88a3c,#873b18);
+}
+
+.restaurant-bottom {
+    border-top: 1px solid rgba(255,255,255,.07);
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #675d56;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 8px;
+}
+
+.restaurant-bottom strong {
+    color: #ff7c37;
+}
+
+
+/* BARBER */
+
+.barber-visual {
+    min-height: 382px;
+    background:
+        radial-gradient(circle at 78% 35%, rgba(255,255,255,.07), transparent 25%),
+        #101010;
+    color: #eee;
+}
+
+.barber-top {
+    height: 57px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #292929;
+}
+
+.barber-top strong {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.barber-top strong span {
+    color: #aaa;
+}
+
+.barber-top div {
+    margin-left: auto;
+    margin-right: 22px;
+    color: #777;
+    font-size: 7px;
+    letter-spacing: .08em;
+}
+
+.barber-top button {
+    border: 1px solid #555;
+    background: transparent;
+    color: #ddd;
+    padding: 8px 11px;
+    font-size: 7px;
+}
+
+.barber-main {
+    min-height: 265px;
+    padding: 35px 40px;
+    display: grid;
+    grid-template-columns: 1fr 210px;
+    align-items: center;
+}
+
+.barber-main small {
+    color: #777;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7px;
+}
+
+.barber-main h4 {
+    font-size: 34px;
+    line-height: .94;
+    letter-spacing: -1.5px;
+    margin-top: 12px;
+    max-width: 330px;
+}
+
+.barber-main h4 span {
+    color: #777;
+}
+
+.barber-main p {
+    color: #777;
+    font-size: 9px;
+    max-width: 250px;
+    margin-top: 12px;
+}
+
+.barber-button {
+    margin-top: 17px;
+    padding: 9px 12px;
+    border: 1px solid #444;
+    background: #eee;
+    color: #111;
+    font-size: 7px;
+}
+
+.barber-person {
+    width: 170px;
+    height: 215px;
+    position: relative;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+.barber-person .head {
+    position: absolute;
+    width: 70px;
+    height: 95px;
+    background: #9b735c;
+    border-radius: 45% 45% 48% 48%;
+    left: 48px;
+    top: 35px;
+}
+
+.barber-person .hair {
+    position: absolute;
+    width: 80px;
+    height: 65px;
+    background: #171717;
+    border-radius: 50% 50% 30% 30%;
+    left: 43px;
+    top: 18px;
+    transform: rotate(-5deg);
+}
+
+.barber-person .body {
+    position: absolute;
+    width: 160px;
+    height: 150px;
+    background: #292929;
+    border-radius: 45% 45% 0 0;
+    left: 5px;
+    top: 120px;
+}
+
+.barber-services {
+    border-top: 1px solid #282828;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    color: #777;
+    font-size: 7px;
+}
+
+.barber-services b {
+    color: #ddd;
+    margin-left: 5px;
+}
+
+
+/* CAR */
+
+.car-visual {
+    min-height: 382px;
+    background:
+        radial-gradient(circle at 75% 55%, rgba(83,154,255,.17), transparent 32%),
+        #090d13;
+    color: white;
+}
+
+.car-nav {
+    height: 57px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.car-nav strong {
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.car-nav div {
+    margin-left: auto;
+    margin-right: 22px;
+    color: #58616f;
+    font-size: 7px;
+}
+
+.car-nav span {
+    color: #66717e;
+    font-size: 7px;
+}
+
+.car-main {
+    min-height: 270px;
+    padding: 30px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-copy {
+    position: relative;
+    z-index: 3;
+}
+
+.car-copy small {
+    color: #5d9eff;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7px;
+}
+
+.car-copy h4 {
+    font-size: 60px;
+    line-height: .85;
+    margin-top: 8px;
+    letter-spacing: -4px;
+}
+
+.car-copy h4 span {
+    display: block;
+    color: #609cff;
+}
+
+.car-copy p {
+    max-width: 230px;
+    margin-top: 12px;
+    color: #66717e;
+    font-size: 9px;
+}
+
+.car-copy button {
+    margin-top: 17px;
+    padding: 9px 13px;
+    border: 1px solid #315d91;
+    background: rgba(65,133,220,.1);
+    color: #8abaff;
+    font-size: 7px;
+}
+
+.car-shape {
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    width: 350px;
+    height: 160px;
+}
+
+.car-body {
+    position: absolute;
+    width: 300px;
+    height: 65px;
+    background: linear-gradient(150deg,#637488,#1b2633);
+    border-radius: 70% 25% 15% 15%;
+    right: 10px;
+    bottom: 35px;
+    transform: skewX(-8deg);
+    box-shadow: 0 25px 35px rgba(0,0,0,.6);
+}
+
+.car-window {
+    position: absolute;
+    width: 145px;
+    height: 42px;
+    background: linear-gradient(140deg,#9fb6ce,#111b26);
+    right: 85px;
+    bottom: 82px;
+    clip-path: polygon(15% 100%,35% 0,82% 0,100% 100%);
+}
+
+.wheel {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #07090c;
+    border: 8px solid #343f4d;
+    bottom: 17px;
+}
+
+.wheel-one {
+    right: 65px;
+}
+
+.wheel-two {
+    right: 275px;
+}
+
+.car-footer {
+    border-top: 1px solid rgba(255,255,255,.07);
+    padding: 12px 25px;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    color: #4e5967;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7px;
+}
+
+.car-footer b {
+    color: #7faeff;
+    margin-right: 14px;
+}
+
+
+/* HOTEL */
+
+.hotel-visual {
+    min-height: 382px;
+    background:
+        linear-gradient(180deg,#182a38,#0d161d);
+    color: white;
+}
+
+.hotel-nav {
+    height: 57px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.hotel-nav strong {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.hotel-nav div {
+    margin-left: auto;
+    margin-right: 22px;
+    color: #9aa5ab;
+    font-size: 7px;
+}
+
+.hotel-nav button {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.25);
+    color: white;
+    padding: 8px 13px;
+    font-size: 7px;
+}
+
+.hotel-main {
+    min-height: 270px;
+    position: relative;
+    overflow: hidden;
+    padding: 35px 40px;
+}
+
+.hotel-copy {
+    position: relative;
+    z-index: 4;
+}
+
+.hotel-copy small {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7px;
+    color: #b6a27f;
+}
+
+.hotel-copy h4 {
+    margin-top: 13px;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: .9;
+    max-width: 270px;
+}
+
+.hotel-copy h4 span {
+    color: #c5af87;
+}
+
+.hotel-copy p {
+    color: #99a2a5;
+    font-size: 9px;
+    margin-top: 13px;
+    max-width: 220px;
+}
+
+.hotel-copy button {
+    margin-top: 18px;
+    border: 1px solid #8f7b5b;
+    background: transparent;
+    color: #d4bf98;
+    padding: 9px 12px;
+    font-size: 7px;
+}
+
+.hotel-building {
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+    width: 300px;
+    height: 260px;
+}
+
+.hotel-sky {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 70% 20%,rgba(244,190,110,.45),transparent 16%);
+}
+
+.hotel-structure {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    width: 190px;
+    height: 150px;
+    background: #d5c8ae;
+    transform: perspective(400px) rotateY(-8deg);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 14px;
+    padding: 18px;
+}
+
+.hotel-structure i {
+    background: #283f4b;
+    border: 3px solid #b3a58b;
+}
+
+.hotel-pool {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    width: 260px;
+    height: 35px;
+    border-radius: 50%;
+    background: #3b8491;
+    filter: blur(.2px);
+}
+
+.hotel-footer {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #7d8b91;
+    font-size: 7px;
+    letter-spacing: .08em;
+}
+
+
+/* FASHION */
+
+.fashion-visual {
+    min-height: 382px;
+    background: #e6e3dd;
+    color: #171717;
+}
+
+.fashion-nav {
+    height: 57px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c9c6c0;
+}
+
+.fashion-nav strong {
+    font-size: 18px;
+    letter-spacing: -1px;
+}
+
+.fashion-nav div {
+    margin-left: auto;
+    margin-right: 25px;
+    font-size: 7px;
+}
+
+.fashion-nav span {
+    font-size: 8px;
+}
+
+.fashion-main {
+    min-height: 260px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 25px 40px;
+    overflow: hidden;
+}
+
+.fashion-copy {
+    align-self: center;
+    z-index: 2;
+}
+
+.fashion-copy small {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7px;
+}
+
+.fashion-copy h4 {
+    font-size: 48px;
+    line-height: .85;
+    letter-spacing: -3px;
+    margin-top: 10px;
+}
+
+.fashion-copy h4 span {
+    display: block;
+    font-size: 23px;
+    letter-spacing: -1px;
+}
+
+.fashion-copy p {
+    color: #77736d;
+    font-size: 9px;
+    max-width: 180px;
+    margin-top: 12px;
+}
+
+.fashion-copy button {
+    margin-top: 17px;
+    background: #171717;
+    color: white;
+    border: 0;
+    padding: 9px 12px;
+    font-size: 7px;
+}
+
+.fashion-model {
+    position: relative;
+    height: 260px;
+}
+
+.model-head {
+    position: absolute;
+    width: 45px;
+    height: 58px;
+    border-radius: 50%;
+    background: #b99a83;
+    top: 17px;
+    left: 85px;
+}
+
+.model-body {
+    position: absolute;
+    width: 155px;
+    height: 235px;
+    background: #c7c2ba;
+    top: 65px;
+    left: 30px;
+    clip-path: polygon(30% 0,70% 0,100% 100%,0 100%);
+}
+
+.model-shirt {
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    background: #222;
+    top: 77px;
+    left: 45px;
+    clip-path: polygon(15% 0,85% 0,100% 100%,0 100%);
+}
+
+.fashion-products {
+    border-top: 1px solid #c9c6c0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 7px;
+}
+
+.fashion-products div {
+    padding: 11px 14px;
+    border-right: 1px solid #c9c6c0;
+}
+
+.fashion-products span {
+    color: #88837c;
+    margin-right: 8px;
+}
+
+.fashion-products b {
+    float: right;
+}
+
+
+/* FITNESS */
+
+.fitness-visual {
+    min-height: 382px;
+    background:
+        radial-gradient(circle at 70% 50%,rgba(119,255,78,.14),transparent 30%),
+        #090c0a;
+    color: white;
+}
+
+.fitness-nav {
+    height: 57px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #202620;
+}
+
+.fitness-nav strong {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.fitness-nav strong span {
+    color: #7dff56;
+}
+
+.fitness-nav div {
+    margin-left: auto;
+    margin-right: 25px;
+    color: #626a63;
+    font-size: 7px;
+}
+
+.fitness-nav button {
+    background: #82ff5c;
+    color: #091008;
+    border: 0;
+    padding: 8px 14px;
+    font-size: 7px;
+    font-weight: 700;
+}
+
+.fitness-main {
+    min-height: 270px;
+    padding: 35px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fitness-copy small {
+    color: #6c796d;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 7px;
+}
+
+.fitness-copy h4 {
+    font-size: 46px;
+    line-height: .86;
+    letter-spacing: -3px;
+    margin-top: 12px;
+}
+
+.fitness-copy h4 span {
+    display: block;
+    color: #83ff5e;
+}
+
+.fitness-copy p {
+    color: #69716b;
+    font-size: 9px;
+    margin-top: 13px;
+    max-width: 210px;
+}
+
+.fitness-copy button {
+    margin-top: 18px;
+    padding: 9px 12px;
+    border: 1px solid #3f7330;
+    background: rgba(123,255,81,.07);
+    color: #a4ff89;
+    font-size: 7px;
+}
+
+.fitness-shape {
+    width: 190px;
+    height: 190px;
+    position: relative;
+}
+
+.fitness-circle {
+    width: 145px;
+    height: 145px;
+    border: 1px solid #79f45c;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    box-shadow:
+        0 0 40px rgba(119,255,78,.12),
+        inset 0 0 40px rgba(119,255,78,.08);
+}
+
+.fitness-lines {
+    position: absolute;
+    inset: 0;
+    transform: rotate(45deg);
+}
+
+.fitness-lines i {
+    position: absolute;
+    width: 130px;
+    height: 1px;
+    background: #7cff5e;
+    left: 30px;
+    top: 95px;
+}
+
+.fitness-lines i:nth-child(2) {
+    transform: rotate(90deg);
+}
+
+.fitness-lines i:nth-child(3) {
+    transform: rotate(45deg);
+}
+
+.fitness-shape strong {
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+    font-family: "JetBrains Mono", monospace;
+    color: #83ff5e;
+    font-size: 30px;
+}
+
+.fitness-footer {
+    border-top: 1px solid #202620;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    color: #586259;
+    font-size: 7px;
 }
 
 
@@ -1023,15 +1724,64 @@ button {
     line-height: 1.7;
 }
 
-.contact-note {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 11px 16px;
-    border: 1px dashed #343a45;
-    border-radius: 7px;
-    color: #777e89;
+
+/* CONTACT BUTTONS */
+
+.contact-links {
+    width: min(620px, 100%);
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.contact-button {
+    min-height: 75px;
+    padding: 0 20px;
+    border: 1px solid rgba(255,255,255,.09);
+    background: rgba(255,255,255,.025);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+    transition: .3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-4px);
+    border-color: rgba(139,92,246,.45);
+    background: rgba(139,92,246,.06);
+}
+
+.contact-button-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.1);
+    color: #a78bfa;
+    font-size: 16px;
+}
+
+.contact-button span:nth-child(2) {
+    flex: 1;
+    color: #e5e7eb;
+    font-size: 13px;
+}
+
+.contact-button small {
+    display: block;
+    margin-bottom: 5px;
+    color: #656871;
     font-family: "JetBrains Mono", monospace;
-    font-size: 10px;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+}
+
+.contact-button b {
+    color: #777b84;
+    font-size: 15px;
 }
 
 
@@ -1100,6 +1850,10 @@ button {
         border-bottom: 1px solid #242933;
         order: -1;
     }
+
+    .car-shape {
+        right: -40px;
+    }
 }
 
 
@@ -1152,33 +1906,97 @@ button {
         padding: 30px 24px;
     }
 
-    .restaurant-hero {
-        padding: 35px 22px;
+    .project-preview {
+        min-height: 360px;
     }
 
-    .restaurant-hero h4 {
-        font-size: 23px;
+    .concept-browser {
+        min-height: 360px;
     }
 
-    .food-circle {
-        width: 105px;
-        height: 105px;
+    .restaurant-main,
+    .barber-main,
+    .car-main,
+    .hotel-main,
+    .fitness-main {
+        padding: 25px 20px;
     }
 
-    .food {
-        font-size: 55px;
+    .restaurant-copy h4 {
+        font-size: 30px;
     }
 
-    .restaurant-nav {
+    .restaurant-food-visual {
+        transform: scale(.75);
+        margin-right: -30px;
+    }
+
+    .restaurant-nav-new div,
+    .barber-top div,
+    .car-nav div,
+    .hotel-nav div,
+    .fitness-nav div {
         display: none;
     }
 
-    .food-cards {
-        grid-template-columns: 1fr;
+    .barber-main {
+        grid-template-columns: 1fr 130px;
     }
 
-    .personal-center h4 {
-        font-size: 29px;
+    .barber-main h4 {
+        font-size: 27px;
+    }
+
+    .barber-person {
+        transform: scale(.75);
+        transform-origin: bottom right;
+    }
+
+    .car-copy h4 {
+        font-size: 45px;
+    }
+
+    .car-shape {
+        right: -90px;
+        opacity: .75;
+        transform: scale(.75);
+        transform-origin: right bottom;
+    }
+
+    .hotel-copy h4 {
+        font-size: 35px;
+    }
+
+    .hotel-building {
+        right: -80px;
+        transform: scale(.75);
+        transform-origin: bottom right;
+    }
+
+    .fashion-main {
+        padding: 20px;
+    }
+
+    .fashion-copy h4 {
+        font-size: 37px;
+    }
+
+    .fashion-model {
+        transform: scale(.8);
+        transform-origin: bottom center;
+    }
+
+    .fitness-copy h4 {
+        font-size: 37px;
+    }
+
+    .fitness-shape {
+        transform: scale(.75);
+        margin-right: -35px;
+    }
+
+    .fashion-products {
+        font-size: 6px;
     }
 
     .services-grid {
@@ -1215,65 +2033,39 @@ button {
         flex-wrap: wrap;
     }
 }
-.contact-links {
-    width: min(620px, 100%);
-    margin: 35px auto 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
 
-.contact-button {
-    min-height: 75px;
-    padding: 0 20px;
-    border: 1px solid rgba(255,255,255,.09);
-    background: rgba(255,255,255,.025);
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-align: left;
-    transition: .3s ease;
-}
-
-.contact-button:hover {
-    transform: translateY(-4px);
-    border-color: rgba(139,92,246,.45);
-    background: rgba(139,92,246,.06);
-}
-
-.contact-button-icon {
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(255,255,255,.1);
-    color: #a78bfa;
-    font-size: 16px;
-}
-
-.contact-button span:nth-child(2) {
-    flex: 1;
-    color: #e5e7eb;
-    font-size: 13px;
-}
-
-.contact-button small {
-    display: block;
-    margin-bottom: 5px;
-    color: #656871;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 8px;
-    letter-spacing: 1.5px;
-}
-
-.contact-button b {
-    color: #777b84;
-    font-size: 15px;
-}
 
 @media (max-width: 650px) {
+
     .contact-links {
         grid-template-columns: 1fr;
+    }
+
+    .restaurant-main,
+    .car-main,
+    .hotel-main,
+    .fitness-main {
+        display: block;
+    }
+
+    .restaurant-food-visual,
+    .fitness-shape {
+        display: none;
+    }
+
+    .car-shape {
+        opacity: .35;
+    }
+
+    .hotel-building {
+        opacity: .35;
+    }
+
+    .fashion-main {
+        grid-template-columns: 1fr;
+    }
+
+    .fashion-model {
+        display: none;
     }
 }
